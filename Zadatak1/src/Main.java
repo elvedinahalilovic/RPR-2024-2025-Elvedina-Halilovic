@@ -19,6 +19,7 @@ public class Main {
             System.out.print("Unesite cijeli broj n: ");
             n = scanner.nextInt();
             if(n>500) System.out.print("Uneseni broj je prevelik.");
+            if(n<2)   System.out.print("Nije moguće izvršiti izračunavanje prostih brojeva.");
         }while(n>=500);
 
         for(int i=2; i<=2*n; i++){
