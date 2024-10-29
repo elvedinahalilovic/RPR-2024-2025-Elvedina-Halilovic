@@ -1,8 +1,11 @@
 import Izuzeci.PremladStudentException;
 import Izuzeci.StudentBuducnostException;
 import Klase.Odsjek;
+import Klase.Student;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -20,6 +23,16 @@ public class Main {
                 Date datumDate = new Date(godina, mjesec, dan);
                 student = new Student("Ime", "Prezime", datumDate, "12345", Odsjek.RI, 2);
                 uspjesanUnos = true;
+
+                System.out.printf("Unesite ocjene studenta: (x,y,...):");
+                String str = scanner.nextLine();
+                String[] str1 = str.split(",");
+                List<Integer> ocjene = new ArrayList<Integer>();
+                for(String str2 : str1){
+                    ocjene.add(Integer.valueOf(str2));
+                }
+                student.setOcjene(ocjene);
+                
             } catch (PremladStudentException e) {
                 System.out.println(e.getMessage());
                 return;
