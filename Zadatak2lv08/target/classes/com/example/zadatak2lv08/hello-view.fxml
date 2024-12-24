@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx">
+    <!-- Labela za status -->
+    <Label fx:id="ucitavanjeLabel" />
+
+    <!-- Naslov za listu predmeta -->
+    <Label text="Lista predmeta" />
+
+    <!-- ListView za prikaz predmeta -->
+    <ListView fx:id="predmetiListView" prefHeight="300.0" prefWidth="300" />
+
+    <!-- Naslov za formu za unos novog predmeta -->
+    <Label text="Forma za unos novog predmeta" />
+
+    <!-- Polje za unos naziva predmeta -->
+    <TextField fx:id="nazivField" promptText="Naziv predmeta" />
+
+    <!-- Polje za unos ECTS -->
+    <TextField fx:id="ectsField" promptText="ECTS" />
+
+    <!-- Dugme za dodavanje novog predmeta -->
+    <Button fx:id="dodajPredmetButton" text="Dodaj predmet" onAction="#dodajPredmet"/>
+
+    <!-- Labela za ispis poruke o statusu -->
+    <Label fx:id="statusLabel" visible="false"/>
+</VBox>
